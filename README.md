@@ -8,4 +8,4 @@ The customer was satisfied with the work, and I fulfilled my goals ✌(ツ)
 # LINK TO LANDING PAGE
 https://ecooofest.com
 <br><br>
-![alt text](./dist/img/for_readme.png)
+![alt text](img/for_readme.png)
