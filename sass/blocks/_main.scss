@@ -1,0 +1,62 @@
+.main {
+    position: relative;
+    min-height: 700px;
+    background-color: #F7FFE5;
+    overflow: hidden;
+    padding: 160px 0;
+    &__subtitle {
+        vertical-align: middle;
+        position: relative;
+        grid-column: 2/6;
+        font-size: $middle-font;
+        color: $kinda-black;
+        line-height: 35px;
+        font-weight: 400;
+        margin-bottom: 0;
+        z-index: 1;
+        transition: all 0.2s;
+    }
+    &__bg-img-1 {
+        position: absolute;
+        top: -150px;
+        left: -150px;
+        transform: scale(-1, 1) rotate(-10deg);
+        height: 700px;
+        z-index: 0;
+        animation-name: leaves-bg-1;
+        animation-duration: 6s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+        user-select: none; 
+    }
+    &__bg-img-2 {
+        position: absolute;
+        top: -100px;
+        right: -120px;
+        z-index: 0;
+        height: 650px;
+        animation-name: leaves-bg-2;
+        animation-duration: 6s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+        user-select: none;
+    }
+    &__more {
+        position: absolute;
+        justify-self: center;
+        text-align: center;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        grid-column: 5/9;
+        z-index: 2;
+        color: $main-color;
+        text-decoration: underline;
+        transition: all 0.2s;
+        font-size: $little-font;
+        &:hover {
+            color: $accent-color-hover;
+            transform: scale(1.02) translateX(-50%);
+        }
+    }
+}

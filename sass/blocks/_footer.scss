@@ -1,0 +1,17 @@
+footer {
+  background-color: #fff;
+  padding: 20px 0;
+  div {
+    text-align: center;
+    grid-column: 1/13;
+    color: $kinda-black;
+    a {
+      color: $kinda-black;
+      transition: color 0.2s;
+      &:hover {
+        color: $accent-color;
+        text-decoration: none;
+      }
+    }
+  }
+}

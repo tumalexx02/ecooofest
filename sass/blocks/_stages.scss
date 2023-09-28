@@ -1,0 +1,15 @@
+.stages {
+    position: relative;
+    padding: 20px 0 80px 0;
+    background-color: #DDF9C1;
+    overflow: hidden;
+    &__bg-1 {
+        height: 700px;
+        position: absolute;
+        filter: blur(2px);
+        left: -400px;
+        bottom: 80px;
+        transform: rotate(-20deg);
+        animation: trash-move 13s linear infinite;
+    }
+}

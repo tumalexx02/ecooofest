@@ -10,24 +10,24 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!localStorage.getItem('lang')) {
     if (navigator.language === 'ru-RU' || navigator.language === 'ru') {
       localStorage.setItem('lang', 'ru')
-      location.reload()
     } else {
       localStorage.setItem('lang', 'en')
-      location.reload()
     }
   }
 
   if (localStorage.getItem('lang') === 'ru') {
-    document.querySelector('.page').innerHTML = ruPage
+    document.querySelector('.page').innerHTML = ruPage;
+    document.title = 'Эко-фест'
   } else {
-    document.querySelector('.page').innerHTML = enPage
+    document.querySelector('.page').innerHTML = enPage;
+    document.title = 'Eco-fest'
   }
 
   const hamburgerIcon = document.querySelector('.hamburger__icon');
   const hamburgerElement = document.querySelector('.hamburger');
 
   // Toggle hamburger_active class when hamburger button is clicked
-  document.querySelector('.hamburger__icon').addEventListener('click', () => {
+  hamburgerIcon.addEventListener('click', () => {
     hamburgerElement.classList.toggle('hamburger_active');
   });
 

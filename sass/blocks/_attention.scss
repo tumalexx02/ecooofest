@@ -1,0 +1,29 @@
+.attention {
+    position: relative;
+    padding: 60px 0 40px 0;
+    min-height: 400px;
+    background-color: #DDF9C1;
+    overflow: hidden;
+    &__text {
+        margin-bottom: 40px;
+        grid-column: 2/8;
+        text-align: left;
+        font-size: $little-font;
+        line-height: 30px;
+        hyphens: auto;
+        color: $kinda-black;
+        transition: all 0.2s;
+    }
+    &__bg-img {
+        position: absolute;
+        right: -10px;
+        top: 70px;
+        height: 500px;
+        z-index: 1;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            scale: 1.02;
+        }
+    }
+}

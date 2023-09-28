@@ -1,0 +1,36 @@
+.upper {
+    position: fixed;
+    display: inline-block;
+    z-index: 7;
+    bottom: 30px;
+    right: calc((100vw - 1140px)/2);
+    transition: all 0.2s;
+    &__link {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        grid-column: 12/13;
+        justify-self: end;
+        background-color: #fff;
+        border-radius: 15px;
+        border: 2px solid #fff;
+        background-color: rgba($color: #fff, $alpha: 0.6);
+        box-shadow: 0px 0px 20px 0px rgba(181, 192, 157, 0.25);
+        backdrop-filter: blur(5px);
+        transform: translateY(200%);
+        transition: all 0.2s;
+        z-index: 10;
+        img {
+            width: 25px;
+            transform: translateY(-2px);
+        }
+        &:active {
+            transform: scale(1.2);
+        }
+        &_active {
+            transform: translateY(0);
+        }
+    }
+}

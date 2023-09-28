@@ -1,0 +1,29 @@
+.button {
+    position: relative;
+    background-color: $accent-color;
+    color: #fff;
+    border: none;
+    height: 70px;
+    border-radius: 15px;
+    transition: all 0.2s;
+    font-size: $little-font;
+    font-weight: 600;
+    z-index: 4;
+    &:hover {
+        background-color: $accent-color-hover;
+        transform: scale(1.04);
+    }
+    &_main {
+        grid-column: 8/12;
+        z-index: 1;
+    }
+    &_centre {
+        grid-column: 5/9;
+    }
+    &_left {
+        grid-column: 2/6;
+    }
+    &_right {
+        grid-column: 4/8;
+    }
+}
