@@ -7,8 +7,9 @@ onhashchange = e => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  // First launch of the site and checking the language
   if (!localStorage.getItem('lang')) {
-    if (navigator.language === 'ru') {
+    if (navigator.language === 'ru' || navigator.language === 'ru-RU') {
       localStorage.setItem('lang', 'ru')
       document.querySelector('.page').innerHTML = ruPage;
       document.title = 'Эко-фест'
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Every time when the site loads, a page with the desired language will be loaded
   if (localStorage.getItem('lang') === 'ru') {
     document.querySelector('.page').innerHTML = ruPage;
     document.title = 'Эко-фест'
@@ -26,6 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.page').innerHTML = enPage;
     document.title = 'Eco-fest'
   }
+
+  // Scroll using links without changing url
+  const hamburgerLinks = document.querySelectorAll('.hamburger__link');
+  const headerLinks = document.querySelectorAll('.header__link');
+
+  [...hamburgerLinks, ...headerLinks].forEach((link) => {
+    link.addEventListener('click', (e) => {
+      if (!link.classList.contains('language-link')) {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView();
+      }
+    })
+  })
 
   const hamburgerIcon = document.querySelector('.hamburger__icon');
   const hamburgerElement = document.querySelector('.hamburger');
@@ -35,15 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburgerElement.classList.toggle('hamburger_active');
   });
 
-  const hamburgerLinks = document.querySelectorAll('.hamburger__link');
-
   // Removing hamburber active class when link in hamburger is clicked
   hamburgerLinks.forEach((link) => {
     link.addEventListener('click', () => {
       hamburgerElement.classList.remove('hamburger_active');
     })
   });
-
 
   // Removing hamburger active class when background behind hamburger is clicked
   const hamburgerBg = document.querySelector('.hamburger__background');
@@ -99,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Language toggling
+  // Language switching
   const languageButtons = document.querySelectorAll('.language-link');
 
   languageButtons.forEach((button) => {
