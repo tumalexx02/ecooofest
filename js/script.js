@@ -35,6 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburgerElement.classList.toggle('hamburger_active');
   });
 
+  const hamburgerLinks = document.querySelectorAll('.hamburger__link');
+
+  // Removing hamburber active class when link in hamburger is clicked
+  hamburgerLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      hamburgerElement.classList.remove('hamburger_active');
+    })
+  });
+
+
   // Removing hamburger active class when background behind hamburger is clicked
   const hamburgerBg = document.querySelector('.hamburger__background');
 
@@ -56,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Showing modal window when any button_modal is clicked
   const buttonModal = document.querySelectorAll('.button_modal');
-
+  
   buttonModal.forEach(button => {
     button.addEventListener('click', function() {
       const modal = document.querySelector('.modal');
@@ -78,10 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
     mateCardMobile.classList.remove('mate-card_modal_active')
   });
 
-  // Removing hamburber active class when link in hamburger is clicked
-  document.querySelectorAll('.hamburger__link').forEach(link => {
-    link.addEventListener('click', hamburgerElement.classList.remove('hamburger_active'));
-  });
 
   // Upper show/hide script
   window.addEventListener('scroll', function() {
