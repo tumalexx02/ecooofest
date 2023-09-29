@@ -3,7 +3,7 @@ My first HTML / SCSS / JS landing page project, it was created for ECO-FEST case
 <br><br>
 In this project, I tried to hone my HTML and CSS layout skills, also using the SCSS preprocessor for more convenient styling. The layout was done according to the BEM methodology. There was also a goal to get acquainted with JavaScript at the initial level by adding simple interactive elements.
 <br><br>
-The customer was satisfied with the work, and I fulfilled my goals ✌(ツ)
+The customer was satisfied with the work, and I fulfilled my goals ✌️(ツ)
 
 # LINK TO LANDING PAGE
 https://ecooofest.com

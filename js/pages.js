@@ -321,9 +321,6 @@ const enPage = `<header class="header" id="up">
             <li class="header__item">
                 <a href="#qanda" class="header__link">Q&A</a>
             </li>
-            <!-- <li class="header__item">
-                <a href="#" class="header__link">Партнёры</a>
-            </li> -->
             <li class="header__item">
                 <a href="#contact" class="header__link">Communication</a>
             </li>
@@ -360,14 +357,11 @@ const enPage = `<header class="header" id="up">
             <li class="hamburger__item">
                 <a href="#qanda" class="hamburger__link">Q&A</a>
             </li>
-            <!-- <li class="hamburger__item">
-                <a href="#" class="hamburger__link">Партнёры</a>
-            </li> -->
             <li class="hamburger__item">
                 <a href="#contact" class="hamburger__link">Communication</a>
             </li>
             <li class="hamburger__item">
-                <a href="/" class="hamburger__link">Русский</a>
+                <a href="/" class="hamburger__link language-link">Русский</a>
             </li>
         </ul>
     </nav>
@@ -479,15 +473,6 @@ const enPage = `<header class="header" id="up">
     <img src="img/bg/bg_sprites/trashcan.webp" alt="" class="stages__bg-1">
 </div>
 </section>
-<!-- 
-<section class="participate">
-<div class="container">
-    <h3 class="title title_left">для участия <span>заполните форму</span></h3>
-    <form action="" class="participate__form">
-        <input type="text" class="participate__input">
-    </form>
-</div>
-</section> -->
 
 <section class="prizes" id="prizes">
 <div class="container">

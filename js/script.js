@@ -8,10 +8,14 @@ onhashchange = e => {
 
 document.addEventListener('DOMContentLoaded', () => {
   if (!localStorage.getItem('lang')) {
-    if (navigator.language === 'ru-RU' || navigator.language === 'ru') {
+    if (navigator.language === 'ru') {
       localStorage.setItem('lang', 'ru')
+      document.querySelector('.page').innerHTML = ruPage;
+      document.title = 'Эко-фест'
     } else {
-      localStorage.setItem('lang', 'en')
+      localStorage.setItem('lang', 'en');
+      document.querySelector('.page').innerHTML = enPage;
+      document.title = 'Eco-fest'
     }
   }
 
@@ -98,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (button.innerHTML === 'English') {
         localStorage.removeItem('lang');
         localStorage.setItem('lang', 'en');
-        location.reload()
+        location.reload();
       } else if (button.innerHTML === 'Русский') {
         localStorage.removeItem('lang');
         localStorage.setItem('lang', 'ru');
